@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <title>Website project template</title>
+    <title>home page</title>
 </head>
 <script>
     const loadComponents = (id, url) =>  {
@@ -18,14 +18,20 @@
     window.onload = () => {
         loadComponents('header', 'src/sections/header.html');
         loadComponents('hero', 'src/sections/hero.html');
-        loadComponents('contact', 'src/sections/contact.html');
+        loadComponents('about', 'src/sections/contact.html');
+        loadComponents('brand', 'src/sections/brand.html');
+        loadComponents('list', 'src/sections/list.html');
+        loadComponents('redShape', 'src/sections/redshape.html');
         loadComponents('footer', 'src/sections/footer.html');
     }
 </script>
 <body>
     <div id="header"></div>
     <div id="hero"></div>
-    <div id="contact"></div>
+    <div id="about"></div>
+    <div id="brand"></div>
+    <div id="list"></div>
+    <div id="redShape"></div>
     <div id="footer"></div>
 </body>
 </html>
