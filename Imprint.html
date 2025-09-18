@@ -6,7 +6,11 @@
     <link rel="stylesheet" href="/dist/output.css">
     <title>Imprint page</title>
 </head>
-<script>
+<body>
+    <div id="header"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+    <script>
     const loadComponents = (id, url) =>  {
         fetch(url)
         .then((response) => response.text())
@@ -21,9 +25,5 @@
         loadComponents('footer', 'src/sections/footer.html');
     }
 </script>
-<body>
-    <div id="header"></div>
-    <div id="contact"></div>
-    <div id="footer"></div>
 </body>
 </html>

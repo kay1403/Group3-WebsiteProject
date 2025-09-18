@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="/dist/output.css">
     <title>home page</title>
 </head>
-<script>
+
+<body>
+    <div id="header"></div>
+    <div id="hero"></div>
+    <div id="about"></div>
+    <div id="brand"></div>
+    <div id="list"></div>
+    <div id="redShape"></div>
+    <div id="footer"></div>
+    <script>
     const loadComponents = (id, url) =>  {
         fetch(url)
         .then((response) => response.text())
@@ -25,13 +34,5 @@
         loadComponents('footer', 'src/sections/footer.html');
     }
 </script>
-<body>
-    <div id="header"></div>
-    <div id="hero"></div>
-    <div id="about"></div>
-    <div id="brand"></div>
-    <div id="list"></div>
-    <div id="redShape"></div>
-    <div id="footer"></div>
 </body>
 </html>
