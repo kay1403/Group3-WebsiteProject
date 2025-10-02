@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities{
+    .theme-black header{
+        @apply text-black
+    }
+    .theme-black #menu-btn{
+        @apply text-black
+    }
+    .theme-green header{
+        @apply text-green
+    }
+    .theme-green #menu-btn{
+        @apply bg-green-600
+    }
+}
