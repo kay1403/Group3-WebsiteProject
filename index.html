@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +7,12 @@
     <title>Website project template</title>
 </head>
 <script>
-    const loadComponents = (id, url) => {
+    const loadComponents = (id, url) =>  {
         fetch(url)
-            .then((response) => response.text())
-            .then((html) => {
-                document.getElementById(id).innerHTML = html;
-            });
+        .then((response) => response.text())
+        .then((html) => {
+            document.getElementById(id).innerHTML = html;
+        });
     }
 
     window.onload = () => {
@@ -23,11 +22,10 @@
         loadComponents('footer', 'src/sections/footer.html');
     }
 </script>
-
 <body>
     <div id="header"></div>
+    <div id="hero"></div>
     <div id="contact"></div>
     <div id="footer"></div>
 </body>
-
 </html>
