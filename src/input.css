@@ -14,4 +14,10 @@
     .theme-green #menu-btn{
         @apply bg-green-600
     }
+    .theme-black footer{
+        @apply text-black;
+    }
+    .theme-green footer{
+        @apply text-green
+    }
 }

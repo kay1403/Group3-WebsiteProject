@@ -3,21 +3,25 @@
 </head>
 <div class="min-h-screen flex flex-col  justify-end bg-gray-500">
 <footer class="w-full text-2xl py-8 px-6">
-  <div class="mx-auto flex justify-around items-start flex-wrap gap-y-8  md:text-left">
+  <div class="hidden lg:flex justify-around items-start">
+        <!--Desktop Version-->
         <!--Address-->
-        <div class="w-full md:w-auto order-1">
+        <div>
             <p>Agentur Baumeister</p>
             <p> BockhstraBe 13</p>
             <p> 10967 Berlin</p>
         </div>
         <!--Contact-->
-        <div class="w-full md:w-auto order-2 ">
+        <div>
          <p> <a href="mailto:hallo@agentur-baumeister.com" class="hover:underline whitespace-nowrap">hallo@agentur-baumeister.com</a> </p> 
           <p>+49 (0)30 - 490 827 87</p> 
         </div>
         <!--LinkedIn-->
-        <div class="flex gap-20 w-full md:w-auto order-3">
+        <div>
               <a href="#"> LinkedIn</a> 
+        </div>
+        <!--IG-->
+        <div>    
               <a href="#">Instagram</a>  
         </div>
         <!--Impressum-->
@@ -25,7 +29,24 @@
                  <a href="#">Impressum</a>
                  <a href="#">Datenschutz</a>
         </div>
-         
+    </div>
+    <!--Mobile and I-Pad version-->
+    <div class="flex justify-center gap-6 flex-wrap  text-center lg:hidden">
+        <div class="order-1 md:order-4">
+            <a href="#">Datenschutz</a>
+        </div>
+
+        <div class="order-2 md:order-3">
+            <a href="#">Impressum</a>
+        </div>
+
+        <div class="order-3 md:order-1">
+            <a href="#"> LinkedIn</a> 
+        </div>
+
+        <div class="order-4 md:order-2">
+            <a href="#">Instagram</a>  
+        </div>
     </div>
 </footer>
  </div>
