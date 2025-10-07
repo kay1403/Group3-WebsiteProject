@@ -1,50 +1,30 @@
-<head>
-    <link rel="stylesheet" href="/Group3-WebsiteProject/dist/output.css">
-    <script defer>
-        document.addEventListener('DOMContentLoaded', ()=>{
-
-        const btn = document.getElementById("menu-btn");
-        const menu = document.getElementById("mobile-menu");
-    
-        btn.addEventListener("click", ()=>{
-            menu.classList.toggle("hidden");
-        });
-        
-        });
-    </script>
-</head>
 <header class="w-full p-8 relative">
-    <div class="flex justify-between items-start">
-        <!--Left Side-->
-       <div class="flex flex-col font-normal text-2xl leading-[1] tracking-normal">
-           <a href="#">DE</a>
-           <a href="#">EN</a>
-       </div>
-         <!--Center-->
-       <div class="flex-1 text-center">
-         <h1 class=" font-semibold text-3xl leading-[1] tracking-normal justify-center">Baumeister</h1>
-       </div>
-         <!--Right side-->
-       <nav class="hidden md:flex flex-col font-normal text-2xl leading-[1] tracking-normal">
-            <a href="#" class="hover:underline">About</a>
-            <a href="#" class="hover:underline">Services</a>
-            <a href="#" class="hover:underline">References</a>
-            <a href="#" class="hover:underline">Contact</a>
-        </nav>
-        <!--Mobile Hamburger-->
-            <button id="menu-btn" class="md:hidden flex flex-col space-y-1 p-2 absolute top-4 right-4 bg-gray-700 rounded-full">
-                <span class="bg-black block w-8 h-1 rounded"></span>
-                <span class="bg-black block w-8 h-1 rounded"></span>
-                <span class="bg-black block w-8 h-1 rounded"></span>
-            </button>
+  <div class="flex justify-between items-start">
+    <!-- Left Side -->
+    <div class="flex flex-col font-normal text-2xl leading-[1] tracking-normal">
+      <a href="#">DE</a>
+      <a href="#">EN</a>
+    </div>
 
+    <!-- Center -->
+    <div class="flex-1 text-center">
+      <h1 class="font-semibold text-3xl leading-[1] tracking-normal justify-center">Baumeister</h1>
     </div>
-    
-         <!--Mobile Menu-->
-    <div id="mobile-menu" class="hidden md:hidden space-y-2 flex flex-col font-normal text-2xl leading-[1] tracking-normal p-4 bg-gray-400">
-        <a href="#" class="hover:underline">About</a>
-        <a href="#" class="hover:underline">Services</a>
-        <a href="#" class="hover:underline">References</a>
-        <a href="#" class="hover:underline">Contact</a>
-    </div>
+
+    <!-- Right side (visible sur grand écran seulement) -->
+    <nav class="hidden lg:flex flex-col font-normal text-2xl leading-[1] tracking-normal">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#references" class="hover:underline">References</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+
+    <!-- Burger (visible sur mobile et medium uniquement) -->
+    <a href="menu.html"
+       class="lg:hidden flex flex-col space-y-1 p-2 absolute top-4 right-4 bg-gray-700 rounded-full">
+      <span class="bg-black block w-8 h-1 rounded"></span>
+      <span class="bg-black block w-8 h-1 rounded"></span>
+      <span class="bg-black block w-8 h-1 rounded"></span>
+    </a>
+  </div>
 </header>

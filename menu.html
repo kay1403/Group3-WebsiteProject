@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Group3-WebsiteProject/dist/output.css">
+  <title>Menu - Baumeister</title>
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.menu-link');
+      // Quand on clique sur un lien, on revient sur la page principale
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault(); // Empêche la navigation directe
+          const target = link.getAttribute('href'); // Récupère l’ancre (#about, #contact, etc.)
+          window.location.href = `index.html${target}`; // Redirige vers index.html + ancre
+        });
+      });
+    });
+  </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <header class="w-full p-6 flex justify-between items-center bg-white shadow">
+    <h1 class="text-2xl font-bold">Baumeister</h1>
+    <a href="index.html" class="text-blue-600 hover:underline">✕ Fermer</a>
+  </header>
+
+  <main class="flex-grow p-6 flex flex-col space-y-6 text-3xl font-normal">
+    <a href="#about" class="menu-link hover:underline">About</a>
+    <a href="#services" class="menu-link hover:underline">Services</a>
+    <a href="#references" class="menu-link hover:underline">References</a>
+    <a href="#contact" class="menu-link hover:underline">Contact</a>
+  </main>
+
+  <footer class="text-center py-4 text-gray-500 text-sm">
+    © 2025 Baumeister — Tous droits réservés
+  </footer>
+</body>
+</html>
