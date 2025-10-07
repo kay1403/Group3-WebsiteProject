@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <title>home page</title>
-    <link href="./dist/output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        const loadComponents = (id, url) => {
-            fetch(url)
-                .then((response) => response.text())
-                .then((html) => {
-                    document.getElementById(id).innerHTML = html;
-                });
-        }
+    <title>Website project template</title>
+</head>
+<script>
+    const loadComponents = (id, url) =>  {
+        fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+            document.getElementById(id).innerHTML = html;
+        });
+    }
 
         window.onload = () => {
             loadComponents('header', 'src/sections/header.html');
@@ -29,7 +28,7 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <div id="header" class="theme-black"></div>
     <div id="hero"></div>
     <div id="brand"></div>
     <div id="list"></div>
