@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,35 @@
     <title>Privacy Policy page</title>
     <link href="./dist/output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-     <style>
-    #data h1,
-    #data h2 {
-      margin-top: 2rem; 
-    }
-  </style>
+    <style>
+        #data h1,
+        #data h2 {
+            margin-top: 2rem;
+        }
+    </style>
     <script>
-    const loadComponents = (id, url) =>  {
-        fetch(url)
-        .then((response) => response.text())
-        .then((html) => {
-            document.getElementById(id).innerHTML = html;
-        });
-    }
+        const loadComponents = (id, url) => {
+            fetch(url)
+                .then((response) => response.text())
+                .then((html) => {
+                    document.getElementById(id).innerHTML = html;
+                });
+        }
 
-    window.onload = () => {
-        loadComponents('header', 'src/sections/header.html');
-        loadComponents('data', 'src/sections/data.html');
-        loadComponents('footer', 'src/sections/footer.html');
-    }
-</script>
+        window.onload = () => {
+            loadComponents('header', 'src/sections/header.html');
+            loadComponents('data', 'src/sections/data.html');
+            loadComponents('redshape', 'src/sections/redshape.html');
+            loadComponents('footer', 'src/sections/footer.html');
+        }
+    </script>
 </head>
+
 <body>
     <div id="header"></div>
     <div id="data"></div>
+    <div id="redshape"></div>
     <div id="footer"></div>
 </body>
+
 </html>
