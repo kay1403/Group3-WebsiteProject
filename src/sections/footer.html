@@ -1,20 +1,29 @@
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Group3-WebsiteProject/dist/output.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
-<div class="min-h-screen flex flex-col  justify-end bg-gray-500">
-<footer class="w-full text-2xl py-8 px-6">
-  <div class="hidden lg:flex justify-around items-start">
+<div class="min-h-[100dvh] flex flex-col">
+    <main class="flex-1"></main>
+   <footer class="w-full text-2xl py-8 px-6">
+     <div class="hidden lg:flex justify-around items-start">
         <!--Desktop Version-->
         <!--Address-->
         <div>
             <p>Agentur Baumeister</p>
-            <p> BockhstraBe 13</p>
+            <p> Bockhstraße 13</p>
             <p> 10967 Berlin</p>
         </div>
         <!--Contact-->
         <div>
          <p> <a href="mailto:hallo@agentur-baumeister.com" class="hover:underline whitespace-nowrap">hallo@agentur-baumeister.com</a> </p> 
-          <p>+49 (0)30 - 490 827 87</p> 
+         <p>+49 (0)30 - 490 827 87</p> 
         </div>
         <!--LinkedIn-->
         <div>
@@ -29,24 +38,55 @@
                  <a href="#">Impressum</a>
                  <a href="#">Datenschutz</a>
         </div>
-    </div>
-    <!--Mobile and I-Pad version-->
-    <div class="flex justify-center gap-6 flex-wrap  text-center lg:hidden">
-        <div class="order-1 md:order-4">
+      </div>
+      <!--Mobile version-->
+     <div class="flex flex-col items-start space-y-8 px-4 text-left md:hidden">
+        <!--Address--> 
+        <div class="space-y-1">
+            <p>Agentur Baumeister</p>
+            <p> Bockhstraße 13</p>
+            <p> 10967 Berlin</p>
+        </div>
+       <!--Contact-->
+       <div class="space-y-1">
+          <p> <a href="mailto:hallo@agentur-baumeister.com" class="hover:underline whitespace-nowrap">hallo@agentur-baumeister.com</a> </p> 
+          <p>+49 (0)30 - 490 827 87</p> 
+        </div>
+
+        <div class="flex justify-start gap-6">
             <a href="#">Datenschutz</a>
-        </div>
-
-        <div class="order-2 md:order-3">
             <a href="#">Impressum</a>
-        </div>
-
-        <div class="order-3 md:order-1">
             <a href="#"> LinkedIn</a> 
-        </div>
-
-        <div class="order-4 md:order-2">
             <a href="#">Instagram</a>  
         </div>
-    </div>
-</footer>
- </div>
+     </div>
+        <!--ipad version-->
+        <div class="hidden md:flex lg:hidden flex-col space-y-4 gap-6 px-6">
+            <!--Address+contact--> 
+            <div class="flex justify-between items-start flex-wrap w-full">
+                <div class="space-y-1 text-left">
+                    <p>Agentur Baumeister</p>
+                    <p> Bockhstraße 13</p>
+                    <p> 10967 Berlin</p>
+                </div>
+
+                <div class="space-y-1 text-right">
+                    <p> <a href="mailto:hallo@agentur-baumeister.com" class="hover:underline whitespace-nowrap">hallo@agentur-baumeister.com</a> </p> 
+                    <p>+49 (0)30 - 490 827 87</p> 
+                </div>
+            </div>
+           
+            <!--Links-->
+            <div class="flex justify-between w-full gap-10 flex-wrap">
+                <a href="#"> LinkedIn</a> 
+                <a href="#">Instagram</a>  
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+           
+        </div>
+    </footer>
+</div>
+
+
+   
