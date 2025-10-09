@@ -1,4 +1,73 @@
-<div>
-    <h1 class="text-blue-800">Header</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baumeister</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="/Group3-WebsiteProject/dist/output.css">
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById("menu-btn");
+      const icon = document.getElementById("menu-icon");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+
+        if (menu.classList.contains("hidden")) {
+          icon.src = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(1).png"; // 3 barres
+        } else {
+          icon.src = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(2).png"; // X
+        }
+      });
+    });
+  </script>
+</head>
+
+<body class="font-[Outfit]">
+  <header class="w-full p-8 relative">
+    <div class="flex justify-between items-start">
+      <!-- Left Side -->
+      <div class="flex flex-col font-normal text-2xl leading-[1] tracking-normal">
+        <a href="#">DE</a>
+        <a href="#">EN</a>
+      </div>
+
+      <!-- Center -->
+      <div class="flex-1 text-center">
+        <h1 class="font-semibold text-3xl leading-[1] tracking-normal justify-center">Baumeister</h1>
+      </div>
+
+      <!-- Right side (Desktop Nav) -->
+      <nav class="hidden md:flex flex-col font-normal text-2xl leading-[1] tracking-normal">
+        <a href="#" class="hover:underline">About</a>
+        <a href="#" class="hover:underline">Services</a>
+        <a href="#" class="hover:underline">References</a>
+        <a href="#" class="hover:underline">Contact</a>
+      </nav>
+
+      <!-- Mobile Hamburger (image) -->
+      <button id="menu-btn" class="md:hidden absolute top-4 right-4">
+        <img 
+          id="menu-icon" 
+          src="https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(1).png" 
+          alt="menu" 
+          class="w-39 h-23"
+        >
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden flex flex-col items-center text-center space-y-10 mx-auto mt-[100px] font-normal text-[32px] text-[#00672E] leading-[1] tracking-normal">
+      <a href="#" class="hover:underline">About</a>
+      <a href="#" class="hover:underline">Services</a>
+      <a href="#" class="hover:underline">References</a>
+      <a href="#" class="hover:underline">Contact</a>
+    </div>
+  </header>
+</body>
+</html>
