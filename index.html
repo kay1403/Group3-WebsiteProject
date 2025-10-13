@@ -2,41 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/output.css">
-    <title>home page</title>
-    <link href="./dist/output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        const loadComponents = (id, url) => {
-            fetch(url)
-                .then((response) => response.text())
-                .then((html) => {
-                    document.getElementById(id).innerHTML = html;
-                });
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/output.css">
+  <title>home page</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    const loadComponents = (id, url) => {
+      return fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+        });
+    }
 
-        window.onload = () => {
-            // loadComponents('header', 'src/sections/header.html');
-            loadComponents('hero', 'src/sections/hero.html');
-            loadComponents('brand', 'src/sections/brand.html');
-            loadComponents('list', 'src/sections/list.html');
-            loadComponents('redShape', 'src/sections/redshape.html');
-            loadComponents('footer', 'src/sections/footer.html');
-        }
-    </script>
+    window.onload = async () => {
+      await loadComponents('header', 'src/sections/header.html');
+      await loadComponents('hero', 'src/sections/hero.html');
+      await loadComponents('brand', 'src/sections/brand.html');
+      await loadComponents('list', 'src/sections/list.html');
+      await loadComponents('redShape', 'src/sections/redshape.html');
+      await loadComponents('footer', 'src/sections/footer.html');
+
+      // --- Hamburger Menu Script ---
+      const btn = document.getElementById("menu-btn");
+      const icon = document.getElementById("menu-icon");
+      const menu = document.getElementById("mobile-menu");
+      const Hero = document.getElementById("Hero");
+      const Text = document.getElementById("text");
+
+      if (btn) {
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+
+          if (menu.classList.contains("hidden")) {
+            icon.src = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(1).png";
+            Hero?.classList.remove("md:mt-36");
+            Hero?.classList.remove("mt-48");
+            Text?.classList.remove("hidden");
+          } else {
+            icon.src = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(2).png";
+            Hero?.classList.add("md:mt-36");
+            Hero?.classList.add("mt-48");
+            Text?.classList.add("hidden");
+          }
+        });
+      }
+    }
+  </script>
 </head>
 
-<body>
-    <!-- <div id="header"></div> -->
-    <div id="hero"></div>
-    <div id="brand"></div>
-    <div id="list"></div>
-    <div id="redShape"></div>
-    <div id="footer"></div>
-
-
+<body class="bg-[#efecea]">
+  <div id="header"></div>
+  <div id="hero"></div>
+  <div id="brand"></div>
+  <div id="list"></div>
+  <div id="redShape"></div>
+  <div id="footer"></div>
 </body>
-
 </html>

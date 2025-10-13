@@ -1,98 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link href="/dist/output.css" rel="stylesheet"> 
-   <script src="https://cdn.tailwindcss.com"></script>
-   
-   <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById("menu-btn");
-      const icon = document.getElementById("menu-icon");
-      const menu = document.getElementById("mobile-menu");
-      const Hero= document.getElementById("Hero");
-      const Text=document.getElementById("text");
-      const wrapper= document.getElementById("wrapper")
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-
-        if (menu.classList.contains("hidden")) {
-
-           
-          icon.src = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(1).png"; // 3 barres
-
-           //Removing margin top for the vector when the menu hides
-           Hero.classList.remove("md:mt-36");//medium screen sizes
-           Hero.classList.remove("mt-48");//defualt screen sizes
-           Text.classList.remove("hidden");
-
-        } else {
-          icon.src = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(2).png"; // X
-          //adding margin top for the vector when the menu drops
-          Hero.classList.add("md:mt-36");//medium screen sizes
-          Hero.classList.add("mt-48");//medium screen sizes
-          Text.classList.add("hidden");
-        }
-
-      });
-    });
-  </script>
-
-</head>
-<body>
-    <div class="bg-[#efecea] ">  
-    <!-- Header -->
-     <header class="w-full p-8 fixed top-0 left-0  z-50 mb-10">
-    <div class="flex justify-between items-start">
-      <!-- Left Side -->
-      <div class="flex flex-col font-normal text-2xl leading-[1] tracking-normal">
-        <a href="#">DE</a>
-        <a href="#">EN</a>
-      </div>
-
-      <!-- Center -->
-      <div class="flex-1 text-center">
-        <h1 class="font-bold text-2xl leading-[1] tracking-normal justify-center md:text-5xl hidden md:block lg:block"> Baumeister</h1>
-        <img src="/src/assets/header image.svg" alt="" class="md:hidden">
-      </div>
-
-      <!-- wrapper-div for large screens -->
-      <div id="wrapper" class="lg:block">
-      <!-- Right side (Desktop Nav) -->
-      <nav class="md:hidden hidden lg:flex flex-col font-normal text-2xl leading-[1] tracking-normal">
-        <a href="#" class="hover:underline">About</a>
-        <a href="#" class="hover:underline">Services</a>
-        <a href="#" class="hover:underline">References</a>
-        <a href="#" class="hover:underline">Contact</a>
-      </nav>
-      </div>
-
-      <!-- Mobile Hamburger (image) -->
-      <button id="menu-btn" class="lg:hidden">
-        <img 
-          id="menu-icon" 
-          src="https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(1).png" 
-          alt="menu" 
-          class="w-39 h-23"
-        >
-      </button>
-    </div>
-
-    <!-- wrapper div for medium and small screens-->
-     <div id="wrapper" class="">
-    <!-- Mobile Menu -->
-        <div id="mobile-menu" class=" hidden flex flex-col items-center text-center space-y-10 mx-auto mt-[100px] font-bold text-[32px] text-[#00672E] leading-[1] tracking-normal  absolute z-50 md:left-80 md:top-0 text-2xl md:text-5xl left-32 top-0">
-      <a href="#" class="hover:underline">About</a>
-      <a href="#" class="hover:underline">Services</a>
-      <a href="#" class="hover:underline">References</a>
-      <a href="#" class="hover:underline">Contact</a>
-    </div>
-    </div>
-   
-  </header>
+<section>
 <br><br><br><br><br><br class="hidden md:block"><br class="hidden md:block"><br class=" hidden lg:block"> <br class="hidden lg:block"><br class="hidden lg:block">
     <div id="Hero" class="bg-[#efecea]   lg:flex lg:flex-col ">
         <!-- Vector's Parent Element-->
@@ -136,9 +42,11 @@ not to the noise.
     <img src="/src/assets/Yellow-Vector-2.svg" alt="">
   </div>
 </div>
+</div>  
+</section>
 
-</div>
-</html> 
+   
+
 
 
 
