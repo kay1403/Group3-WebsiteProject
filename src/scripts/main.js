@@ -7,22 +7,22 @@ const loadComponents = async (components) => {
     document.getElementById(id).innerHTML = html;
   }
 
-  // Activer le menu hamburger une fois le header chargé
+  // Activate the hamburger menu once the header is loaded
   const btn = document.getElementById("menu-btn");
   const icon = document.getElementById("menu-icon");
   const menu = document.getElementById("mobile-menu");
   const Hero = document.getElementById("Hero");
   const Text = document.getElementById("text");
 
-  // 🔍 Détection de la page actuelle
+  // Detect the current page
   const currentPage = window.location.pathname;
 
-  // 🟢 Définition des URLs d’icônes
+  // Set base URLs for icons
   const defaultHamburger = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(1).png";
   const specialHamburger = "https://uploads.onecompiler.io/43kq4m26v/43zmm4gv9/Group%204.png";
   const closeIcon = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(2).png";
 
-  // 🧠 Choisir l’icône de base selon la page
+  // Choose the base icon depending on the page
   if (currentPage.includes("imprint.html") || currentPage.includes("privacypolicy.html")) {
     icon.src = specialHamburger;
   } else {
@@ -35,8 +35,9 @@ const loadComponents = async (components) => {
 
       const isMenuOpen = !menu.classList.contains("hidden");
 
-      // 🔁 Si menu ouvert → afficher le X
-      // sinon → afficher le hamburger approprié
+      
+      // If menu is open → show X
+      // otherwise → show the appropriate hamburger
       if (isMenuOpen) {
         icon.src = closeIcon;
         Hero?.classList.add("md:mt-36", "mt-48");
