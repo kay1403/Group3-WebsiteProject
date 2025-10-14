@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy page</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="src/scripts/main.js" defer></script>
+  <style>
+    #data h1, #data h2 { margin-top: 2rem; }
+  </style>
+</head>
+
+<body class="text-green-900 font-[Outfit] bg-[#efecea]">
+  <div id="header"></div>
+  <div id="data"></div>
+  <div id="redshape"></div>
+  <div id="footer"></div>
+
+  <script>
+    window.onload = () => {
+      loadComponents([
+        { id: 'header', url: 'src/sections/header.html' },
+        { id: 'data', url: 'src/sections/data.html' },
+        { id: 'redshape', url: 'src/sections/redshape.html' },
+        { id: 'footer', url: 'src/sections/footer.html' },
+      ]);
+    };
+  </script>
+</body>
+</html>
