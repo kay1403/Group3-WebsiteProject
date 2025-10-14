@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Group3-WebsiteProject/dist/output.css">
-    <title>Website project template</title>
-</head>
-<script>
-    const loadComponents = (id, url) =>  {
-        fetch(url)
-        .then((response) => response.text())
-        .then((html) => {
-            document.getElementById(id).innerHTML = html;
-        });
-    }
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>Privacy Policy page</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        #data h1,
+        #data h2 {
+            margin-top: 2rem;
+        }
+    </style>
+    <script>
+        const loadComponents = (id, url) => {
+            fetch(url)
+                .then((response) => response.text())
+                .then((html) => {
+                    document.getElementById(id).innerHTML = html;
+                });
+        }
 
-    window.onload = () => {
-        loadComponents('header', 'src/sections/header.html');
-        loadComponents('hero', 'src/sections/hero.html');
-        loadComponents('contact', 'src/sections/contact.html');
-        loadComponents('footer', 'src/sections/footer.html');
-    }
-</script>
-<body>
-    <div id="header" class="theme-green"></div>
-    <div id="hero"></div>
-    <div id="contact"></div>
+        window.onload = () => {
+            loadComponents('header', 'src/sections/header.html');
+            loadComponents('data', 'src/sections/data.html');
+            loadComponents('redshape', 'src/sections/redshape.html');
+            loadComponents('footer', 'src/sections/footer.html');
+        }
+    </script>
+</head>
+
+<body class="text-green-900 ">
+    <div id="header"></div>
+    <div id="data"></div>
+    <div id="redshape"></div>
     <div id="footer"></div>
 </body>
+
 </html>
