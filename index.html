@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,23 +28,23 @@
       const btn = document.getElementById("menu-btn");
       const icon = document.getElementById("menu-icon");
       const menu = document.getElementById("mobile-menu");
-      const Hero = document.getElementById("Hero");
-      const Text = document.getElementById("text");
+      const Hero = document.getElementById("Hero1");
+      const Text = document.getElementById("Text");
 
-      if (btn) {
+     if (btn) {
         btn.addEventListener("click", () => {
           menu.classList.toggle("hidden");
 
           if (menu.classList.contains("hidden")) {
             icon.src = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(1).png";
-            Hero?.classList.remove("md:mt-36");
-            Hero?.classList.remove("mt-48");
-            Text?.classList.remove("hidden");
+            Hero.classList.remove("md:mt-36");
+            Hero.classList.remove("mt-48");
+            Text.classList.remove("hidden");
           } else {
             icon.src = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(2).png";
-            Hero?.classList.add("md:mt-36");
-            Hero?.classList.add("mt-48");
-            Text?.classList.add("hidden");
+            Hero.classList.add("md:mt-36");
+            Hero.classList.add("mt-48");
+            Text.classList.add("hidden");
           }
         });
       }
@@ -56,6 +55,15 @@
 <body class="bg-[#efecea]">
   <div id="header"></div>
   <div id="hero"></div>
+  
+  <div id="yellowVector"
+     class="mx-[25%] mt-40 md:w-[50%] mb-40 sticky top-0 z-40">
+  <!-- Sticky wrapper with centering -->
+  <div class="flex justify-center">
+    <img src="/src/assets/Yellow-Vector-2.svg" alt="">
+  </div>
+</div>
+
   <div id="brand"></div>
   <div id="list"></div>
   <div id="redShape"></div>
