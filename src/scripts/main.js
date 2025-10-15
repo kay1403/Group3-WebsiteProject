@@ -16,44 +16,35 @@ const loadComponents = async (components) => {
   const Data = document.getElementById("data");
   const Contact = document.getElementById("contact");
 
-
-  // Detect the current page
-  const currentPage = window.location.pathname;
+  // Detect the current page (always lowercase for reliability)
+  const currentPage = window.location.pathname.toLowerCase();
 
   // Set base URLs for icons
   const defaultHamburger = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(1).png";
   const specialHamburger = "https://uploads.onecompiler.io/43kq4m26v/43zmm4gv9/Group%204.png";
   const closeIcon = "https://uploads.onecompiler.io/43kq4m26v/43yug79tx/Group%205%20(2).png";
 
-  // Choose the base icon depending on the page
-  if (currentPage.includes("imprint.html") || currentPage.includes("privacypolicy.html")) {
-    icon.src = specialHamburger;
-  } else {
-    icon.src = defaultHamburger;
-  }
+  // Detect if the page is special (imprint or privacy policy)
+  const isSpecialPage = currentPage.includes("imprint.html") || currentPage.includes("privacypolicy.html");
+
+  // Set the correct base icon before anything renders
+  icon.src = isSpecialPage ? specialHamburger : defaultHamburger;
 
   if (btn) {
     btn.addEventListener("click", () => {
       menu.classList.toggle("hidden");
-
       const isMenuOpen = !menu.classList.contains("hidden");
 
-      
-      // If menu is open we see X
-      // otherwise we see the appropriate hamburger
       if (isMenuOpen) {
+        // When menu is open → show the X icon
         icon.src = closeIcon;
         Hero?.classList.add("md:mt-36", "mt-48");
         Text?.classList.add("hidden");
         Data?.classList.add("md:mt-36", "mt-48");
         Contact?.classList.add("md:mt-36", "mt-48");
-
       } else {
-        if (currentPage.includes("Imprint.html") || currentPage.includes("PrivacyPolicy.html")) {
-          icon.src = specialHamburger;
-        } else {
-          icon.src = defaultHamburger;
-        }
+        // When closed → restore the correct hamburger (depending on page)
+        icon.src = isSpecialPage ? specialHamburger : defaultHamburger;
         Hero?.classList.remove("md:mt-36", "mt-48");
         Text?.classList.remove("hidden");
         Data?.classList.remove("md:mt-36", "mt-48");
