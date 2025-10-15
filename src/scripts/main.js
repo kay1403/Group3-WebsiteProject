@@ -13,6 +13,9 @@ const loadComponents = async (components) => {
   const menu = document.getElementById("mobile-menu");
   const Hero = document.getElementById("Hero");
   const Text = document.getElementById("text");
+  const Data = document.getElementById("data");
+  const Contact = document.getElementById("contact");
+
 
   // Detect the current page
   const currentPage = window.location.pathname;
@@ -36,12 +39,15 @@ const loadComponents = async (components) => {
       const isMenuOpen = !menu.classList.contains("hidden");
 
       
-      // If menu is open → show X
-      // otherwise → show the appropriate hamburger
+      // If menu is open we see X
+      // otherwise we see the appropriate hamburger
       if (isMenuOpen) {
         icon.src = closeIcon;
         Hero?.classList.add("md:mt-36", "mt-48");
         Text?.classList.add("hidden");
+        Data?.classList.add("md:mt-36", "mt-48");
+        Contact?.classList.add("md:mt-36", "mt-48");
+
       } else {
         if (currentPage.includes("Imprint.html") || currentPage.includes("PrivacyPolicy.html")) {
           icon.src = specialHamburger;
@@ -50,6 +56,8 @@ const loadComponents = async (components) => {
         }
         Hero?.classList.remove("md:mt-36", "mt-48");
         Text?.classList.remove("hidden");
+        Data?.classList.remove("md:mt-36", "mt-48");
+        Contact?.classList.remove("md:mt-36", "mt-48");
       }
     });
   }
