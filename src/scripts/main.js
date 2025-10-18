@@ -41,8 +41,6 @@ const loadComponents = async (components) => {
         Hero?.classList.add("md:mt-[350px]", "mt-[450px]");
         Text?.classList.add("hidden");
         menu.classList.add("flex");
-        Data?.classList.add("md:mt-36", "mt-48");
-        Contact?.classList.add("md:mt-36", "mt-48");
         //opacity
         Data && (Data.style.opacity = "0.2");
         Contact && (Contact.style.opacity = "0.2");
@@ -52,8 +50,6 @@ const loadComponents = async (components) => {
         Hero?.classList.remove("md:mt-[350px]", "mt-[450px]");
         Text?.classList.remove("hidden");
         menu.classList.remove("flex");
-        Data?.classList.remove("md:mt-36", "mt-48");
-        Contact?.classList.remove("md:mt-36", "mt-48");
         //opacity
         Data && (Data.style.opacity = "O.2");
         Contact && (Contact.style.opacity = "0.2"); 
