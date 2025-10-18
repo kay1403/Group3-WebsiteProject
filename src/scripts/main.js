@@ -51,8 +51,8 @@ const loadComponents = async (components) => {
         Text?.classList.remove("hidden");
         menu.classList.remove("flex");
         //opacity
-        Data && (Data.style.opacity = "O.2");
-        Contact && (Contact.style.opacity = "0.2"); 
+        Data && (Data.style.opacity = "1");
+        Contact && (Contact.style.opacity = "1"); 
       }
     });
   }
